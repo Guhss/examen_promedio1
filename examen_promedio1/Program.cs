@@ -36,26 +36,54 @@ namespace examen_promedio1
                         break;
 
                     case 2:
+                        Console.Write("Ingrese el nombre de la planta: ");
+                        string nombrePlanta = Console.ReadLine();
+                        Console.Write("Ingrese el tiempo de vida de la planta: ");
+                        int tiempoDeVidaPlanta = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la cantidad de frutos/verduras: ");
+                        int cantidadFrutosVerduras = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el valor de la semilla: $");
+                        float valorSemilla = float.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el valor del producto cuando crece: $");
+                        float valorProducto = float.Parse(Console.ReadLine());
 
+                        Planta nuevaPlanta = new Planta(nombrePlanta, tiempoDeVidaPlanta, cantidadFrutosVerduras, valorSemilla, valorProducto);
+                        granja.ComprarPlanta(nuevaPlanta);
+                        break;
 
                     case 3:
+                        Console.Write("Ingrese el nombre del animal: ");
+                        string nombreAnimal = Console.ReadLine();
+                        Console.Write("Ingrese el tiempo de vida del animal: ");
+                        int tiempoDeVidaAnimal = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la cantidad de carne/leche/lana/huevos: ");
+                        int cantidadCarneLecheLanaHuevos = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el precio del animal: $");
+                        float precioAnimal = float.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el precio de los productos finales: $");
+                        float precioProductosFinales = float.Parse(Console.ReadLine());
 
+                        Animal nuevoAnimal = new Animal(nombreAnimal, tiempoDeVidaAnimal, cantidadCarneLecheLanaHuevos, precioAnimal, precioProductosFinales);
+                        granja.ComprarAnimal(nuevoAnimal);
+                        break;
 
                     case 4:
-
+                        granja.PasarDeTurno(),
+                        break;
 
                     case 5:
-
+                        granja.MostrarEstadoGranja();
+                        break;
 
                     case 6:
 
 
                     case 7:
-                        Console.WriteLine("Gracias por jugar. ¡Hasta la próxima!");
+                        Console.WriteLine("Gracias. ¡Hasta la próxima!");
                         return;
 
                     default:
-                        Console.WriteLine("Opción no válida. Por favor, selecciona una opción válida.");
+                        Console.WriteLine("Opción no válida.");
                         break;
                 }
             }
