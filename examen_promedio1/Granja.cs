@@ -8,5 +8,9 @@ namespace examen_promedio1
 {
     internal class Granja
     {
+        private float dinero;
+        private List<Planta> plantas;
+        private List<Animal> animales;
+        private float precioExpansion;
     }
 }

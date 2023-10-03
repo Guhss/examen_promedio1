@@ -10,6 +10,10 @@ namespace examen_promedio1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("¡Bienvenido!");
+            Console.Write("Ingresa la cantidad de dinero inicial en tu granja: $");
+            float dineroInicial = float.Parse(Console.ReadLine());
+            Granja granja = new Granja(dineroInicial);
         }
     }
 }
